@@ -1,6 +1,6 @@
 # High Availability & Load Balancing Simulation with Docker
 
-## Projenin Amacı (The Goal)
+## Projenin Amacı
 Bu proje, kurumsal sistemlerdeki "Süreklilik" (High Availability) ve "Yük Dengeleme" (Load Balancing) prensiplerini simüle etmek amacıyla hazırlanmıştır. Monolitik bir yapı yerine, konteyner mimarisi kullanılarak yatayda ölçeklenebilir (horizontally scalable) bir yapı kurulmuştur.
 
 ## Kullanılan Teknolojiler
@@ -11,7 +11,7 @@ Bu proje, kurumsal sistemlerdeki "Süreklilik" (High Availability) ve "Yük Deng
 ## Mimari Şema (Architecture)
 Client Request -> Nginx (Load Balancer) -> [Container A] / [Container B] / [Container C]
 
-## Temel Kazanımlar (Key Takeaways)
+## Temel Kazanımlar
 1.  **Fault Tolerance (Hata Toleransı)**: Konteynerlerden biri çökse bile Nginx trafiği diğerlerine yönlendirerek hizmetin kesilmemesini sağlar.
 2.  **Scalability (Ölçeklenebilirlik)**: `docker-compose up --scale app=10 -d` komutu ile saniyeler içinde sunucu sayısı 3'ten 10'a çıkarılabilir.
 3.  **Resource Efficiency (Kaynak Verimliliği)**: Sanal makineler yerine hafif konteyner yapısı kullanılarak sistem kaynakları optimize edilmiştir.
